@@ -1,28 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "../components";
 
-const meta = {
-  title: "Components/Card",
+const meta: Meta<typeof Card> = {
   component: Card,
-  parameters: {
-    layout: "centered",
-  },
+  //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  argTypes: {},
-} satisfies Meta<typeof Card>;
+  argTypes: {
+    id: {
+      defaultValue: "card",
+      description:
+        "Sets the default value or state of the component (i.e activated or checked or prefilled).",
+      type: "string",
+    },
+  },
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Card>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
-  render: (args) => (
+export const Default: Story = {
+  render: (args: any) => (
     <Card {...args}>
-      <p>Card Contents</p>
+      <p>Contents here</p>
     </Card>
   ),
   args: {
     id: "card",
-    className: "bg-blue-200",
   },
 };
