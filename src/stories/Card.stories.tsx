@@ -21,10 +21,16 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   render: (args: any) => (
     <Card {...args}>
-      <p>Contents here</p>
+      <p>
+        The content displayed on a card is about a single topic, must be easy
+        for users to quickly scan through important information and take action.
+      </p>
     </Card>
   ),
   args: {
     id: "card",
+    title: "Adrian Sumagang",
+    subTitle: "UI/UX Developer",
+    widthFull: false,
   },
 };
