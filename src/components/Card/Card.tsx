@@ -2,6 +2,7 @@ import React, { FC, useContext } from "react";
 import { TCardProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import { Button } from "..";
 
 const Card: FC<TCardProps> = (props) => {
   const {
@@ -11,6 +12,7 @@ const Card: FC<TCardProps> = (props) => {
     widthFull = true,
     title,
     thumbnail,
+    actions,
     subTitle,
     description,
   } = props;
@@ -42,7 +44,14 @@ const Card: FC<TCardProps> = (props) => {
           alt=""
         />
       </div>
-      <div className={cn("p-3 text-sm")}>{children}</div>
+      <div className={cn("flex flex-col gap-2 p-3 text-sm")}>
+        {children}
+        <div className="flex gap-1">
+          {actions?.map((action) => (
+            <Button id={action?.id} key={action?.id} label={action?.label} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
