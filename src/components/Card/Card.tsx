@@ -35,7 +35,13 @@ const Card: FC<TCardProps> = (props) => {
           <p className="text-xs text-opacity-40">{subTitle}</p>
         </div>
       </div>
-      <div className="flex w-full h-32 bg-gray-300"></div>
+      <div className="flex relative w-full min-h-[8rem] bg-gray-300">
+        <img
+          className="w-full h-full bg-cover"
+          src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+      </div>
       <div className={cn("p-3 text-sm")}>{children}</div>
     </div>
   );
