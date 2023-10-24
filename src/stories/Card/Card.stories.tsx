@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Card } from "../../components";
+import { Card, TButtonProps } from "../../components";
 import { actions } from "./data";
 
 const meta: Meta<typeof Card> = {
@@ -33,6 +33,6 @@ export const Default: Story = {
     title: "Adrian Sumagang",
     subTitle: "UI/UX Developer",
     widthFull: false,
-    actions: actions,
+    actions: actions as TButtonProps[],
   },
 };
