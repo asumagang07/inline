@@ -17,6 +17,21 @@ const meta: Meta<typeof Button> = {
       options: ["solid", "outlined", "flat"],
       control: { type: "select" },
     },
+    color: {
+      defaultValue: "blue",
+      description:
+        "Property that changes theme/state of the selection i.e. background and text color",
+      options: [
+        "blue",
+        "red",
+        "orange",
+        "yellow",
+        "purple",
+        "green",
+        "default",
+      ],
+      control: { type: "select" },
+    },
   },
 };
 

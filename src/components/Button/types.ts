@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { DefaultColorEnum } from "../../common/enums";
 
 export interface TButtonProps {
   id: string;
@@ -7,4 +8,5 @@ export interface TButtonProps {
   label?: string;
   variant?: "solid" | "outlined" | "flat";
   borderRadius?: "full" | "default" | "square";
+  color?: keyof typeof DefaultColorEnum;
 }

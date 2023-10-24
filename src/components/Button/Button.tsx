@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { TButtonProps } from "./types";
 import cn from "classnames";
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 const Button: FC<TButtonProps> = (props) => {
   const {
@@ -10,17 +11,23 @@ const Button: FC<TButtonProps> = (props) => {
     label,
     variant = "solid",
     borderRadius = "default",
+    color = "blue",
   } = props;
+
+  const {
+    styles: {
+      buttonStyles: { rootCls },
+    },
+  } = useContext(ThemeContext);
+
   return (
     <button
       id={id}
       className={cn(
         "   font-medium  text-sm px-4 py-1.5 text-center mr-2 mb-2 ",
-        variant === "solid"
-          ? "text-white bg-blue-500 hover:bg-blue-600"
-          : variant === "outlined"
-          ? "text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-600  "
-          : "text-blue-500 hover:bg-blue-100",
+        rootCls.borders[variant],
+        rootCls.borderRadius[borderRadius],
+        rootCls.variants[variant].colors[color],
         borderRadius === "default"
           ? "rounded-sm"
           : borderRadius === "full"
