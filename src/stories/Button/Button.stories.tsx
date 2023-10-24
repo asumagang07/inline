@@ -11,6 +11,12 @@ const meta: Meta<typeof Button> = {
       label: "Button",
       type: "string",
     },
+    variant: {
+      defaultValue: "solid",
+      description: "Changes the variation of the element. ",
+      options: ["solid", "outlined", "flat"],
+      control: { type: "select" },
+    },
   },
 };
 
@@ -22,5 +28,14 @@ export const Default: Story = {
   args: {
     id: "Button",
     label: "Button",
+  },
+};
+
+export const Outlined: Story = {
+  render: (args: any) => <Button {...args} />,
+  args: {
+    id: "Button",
+    label: "Button",
+    variant: "outlined",
   },
 };

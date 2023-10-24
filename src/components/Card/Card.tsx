@@ -48,7 +48,12 @@ const Card: FC<TCardProps> = (props) => {
         {children}
         <div className="flex gap-1">
           {actions?.map((action) => (
-            <Button id={action?.id} key={action?.id} label={action?.label} />
+            <Button
+              id={action?.id}
+              key={action?.id}
+              variant={action?.variant}
+              label={action?.label}
+            />
           ))}
         </div>
       </div>

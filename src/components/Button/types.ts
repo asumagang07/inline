@@ -5,4 +5,6 @@ export interface TButtonProps {
   className?: string;
   children?: ReactNode;
   label?: string;
+  variant?: "solid" | "outlined" | "flat";
+  borderRadius?: "full" | "default" | "square";
 }
