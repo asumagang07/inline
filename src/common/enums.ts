@@ -94,3 +94,10 @@ export enum DefaultColorEnum {
   green = ColorEnum["green-500"],
   default = ColorEnum["default-500"],
 }
+
+export enum DefaultSize {
+  "sm",
+  "default",
+  "md",
+  "lg",
+}

@@ -12,6 +12,7 @@ const Button: FC<TButtonProps> = (props) => {
     variant = "solid",
     borderRadius = "default",
     color = "blue",
+    size = "default",
   } = props;
 
   const {
@@ -24,10 +25,13 @@ const Button: FC<TButtonProps> = (props) => {
     <button
       id={id}
       className={cn(
-        "   font-medium  text-sm px-4 py-1.5 text-center mr-2 mb-2 ",
+        rootCls.base,
+        "px-2",
+        rootCls.sizes[size],
         rootCls.borders[variant],
         rootCls.borderRadius[borderRadius],
         rootCls.variants[variant].colors[color],
+        rootCls.hoverable.variants[variant].colors[color],
         borderRadius === "default"
           ? "rounded-sm"
           : borderRadius === "full"

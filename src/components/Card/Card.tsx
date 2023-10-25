@@ -50,6 +50,7 @@ const Card: FC<TCardProps> = (props) => {
           {actions?.map((action) => (
             <Button
               id={action?.id}
+              size="sm"
               key={action?.id}
               variant={action?.variant}
               label={action?.label}
