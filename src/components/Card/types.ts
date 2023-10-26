@@ -9,7 +9,6 @@ export interface TCardProps {
   title?: string;
   subTitle?: string;
   thumbnail?: string;
-  cardImage?: string;
-  description?: string;
   actions?: TButtonProps[];
+  imagePosition?: "top" | "center" | "bottom";
 }

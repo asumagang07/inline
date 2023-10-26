@@ -54,3 +54,12 @@ export const Outlined: Story = {
     variant: "outlined",
   },
 };
+
+export const Flat: Story = {
+  render: (args: any) => <Button {...args} />,
+  args: {
+    id: "Button",
+    label: "Button",
+    variant: "flat",
+  },
+};

@@ -13,6 +13,12 @@ const meta: Meta<typeof Card> = {
         "Sets the default value or state of the component (i.e activated or checked or prefilled).",
       type: "string",
     },
+    imagePosition: {
+      defaultValue: "center",
+      description: "Changes the variation of the element. ",
+      options: ["top", "center", "bottom"],
+      control: { type: "radio" },
+    },
   },
 };
 
@@ -30,9 +36,26 @@ export const Default: Story = {
   ),
   args: {
     id: "card",
-    title: "Adrian Sumagang",
-    subTitle: "UI/UX Developer",
+    title: "Title goes here",
+    subTitle: "Subtitle text",
     widthFull: false,
     actions: actions as TButtonProps[],
+    thumbnail:
+      "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png",
+  },
+};
+
+export const ImageTop: Story = {
+  render: (args: any) => (
+    <Card {...args}>
+      <p>
+        The content displayed on a card is about a single topic, must be easy
+        for users to quickly scan through important information and take action.
+      </p>
+    </Card>
+  ),
+  args: {
+    ...Default.args,
+    imagePosition: "top",
   },
 };

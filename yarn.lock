@@ -2833,7 +2833,7 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.5.1"
 
-"@storybook/manager-api@7.5.1":
+"@storybook/manager-api@7.5.1", "@storybook/manager-api@^7.5.1":
   version "7.5.1"
   resolved "https://npm.dnamicro.net/@storybook/manager-api/-/manager-api-7.5.1.tgz#ebc5c0efc3f9c3451882e61b9b982d898a1fc6c9"
   integrity sha512-ygwJywluhhE1dpA0jC2D/3NFhMXzFCt+iW4m3cOwexYTuiDWF66AbGOFBx9peE7Wk/Z9doKkf9E3v11enwaidA==
@@ -3021,7 +3021,7 @@
     "@testing-library/user-event" "^14.4.0"
     ts-dedent "^2.2.0"
 
-"@storybook/theming@7.5.1":
+"@storybook/theming@7.5.1", "@storybook/theming@^7.5.1":
   version "7.5.1"
   resolved "https://npm.dnamicro.net/@storybook/theming/-/theming-7.5.1.tgz#b3a78f493d644ac8cba5136e04479a58a9ba5546"
   integrity sha512-ETLAOn10hI4Mkmjsr0HGcM6HbzaURrrPBYmfXOrdbrzEVN+AHW4FlvP9d8fYyP1gdjPE1F39XvF0jYgt1zXiHQ==
