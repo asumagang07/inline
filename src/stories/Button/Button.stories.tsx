@@ -39,18 +39,23 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  render: (args: any) => <Button {...args} />,
+  render: (args: any) => (
+    <Button {...args} onClick={() => console.log("Clicked")} />
+  ),
   args: {
     id: "Button",
     label: "Button",
+    variant: "solid",
+    borderRadius: "default",
+    color: "blue",
+    size: "default",
   },
 };
 
 export const Outlined: Story = {
   render: (args: any) => <Button {...args} />,
   args: {
-    id: "Button",
-    label: "Button",
+    ...Default.args,
     variant: "outlined",
   },
 };
@@ -58,8 +63,7 @@ export const Outlined: Story = {
 export const Flat: Story = {
   render: (args: any) => <Button {...args} />,
   args: {
-    id: "Button",
-    label: "Button",
+    ...Default.args,
     variant: "flat",
   },
 };

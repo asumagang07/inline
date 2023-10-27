@@ -2,15 +2,59 @@ import React, { FC, useContext } from "react";
 import { TAvatarProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import { getInitials } from "./utils";
 
 const Avatar: FC<TAvatarProps> = (props) => {
-  const { image, size = "default", borderRadius = "full", status } = props;
+  const {
+    image,
+    size = "default",
+    borderRadius = "full",
+    status,
+    name,
+    color = "blue",
+  } = props;
 
   const {
     styles: {
-      avatarStyles: { rootCls, statusCls },
+      avatarStyles: { rootCls, statusCls, initialCls },
     },
   } = useContext(ThemeContext);
+
+  const renderInitial = () => {
+    if (image) return null;
+
+    if (!name) return null;
+
+    const initials = getInitials(name);
+
+    return (
+      <span
+        className={cn(
+          initialCls.base,
+          initialCls.size[size],
+          rootCls.colors[color],
+          rootCls.borderRadius[borderRadius]
+        )}
+      >
+        {initials}
+      </span>
+    );
+  };
+
+  const renderImage = () => {
+    if (!image) return null;
+
+    return (
+      <img
+        className={cn(
+          "w-full h-full bg-cover",
+          rootCls.borderRadius[borderRadius]
+        )}
+        alt=""
+        src={image}
+      />
+    );
+  };
 
   return (
     <div
@@ -21,18 +65,15 @@ const Avatar: FC<TAvatarProps> = (props) => {
         rootCls.borderRadius[borderRadius]
       )}
     >
-      <img
-        className={cn(
-          "w-full h-full bg-cover",
-          rootCls.borderRadius[borderRadius]
-        )}
-        alt=""
-        src={image}
-      />
-      {status && (
+      {renderImage()}
+      {renderInitial()}
+      {status?.value && (
         <span
           className={cn(
-            "-top-1 -right-1 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white  rounded-full",
+            borderRadius === "full" && (size === "md" || size === "lg")
+              ? "top-0 right-0"
+              : "-top-1 -right-1",
+            statusCls.base,
             statusCls.value[status?.value || "active"]
           )}
         >

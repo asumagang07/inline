@@ -13,6 +13,7 @@ const Button: FC<TButtonProps> = (props) => {
     borderRadius = "default",
     color = "blue",
     size = "default",
+    ...rest
   } = props;
 
   const {
@@ -23,10 +24,11 @@ const Button: FC<TButtonProps> = (props) => {
 
   return (
     <button
+      {...rest}
       id={id}
       className={cn(
         rootCls.base,
-        "px-2",
+        rootCls.spacing.icon_and_or_label[size],
         rootCls.sizes[size],
         rootCls.borders[variant],
         rootCls.borderRadius[borderRadius],
@@ -40,6 +42,7 @@ const Button: FC<TButtonProps> = (props) => {
 
         className
       )}
+      onClick={rest.onClick}
     >
       {label}
       {children}

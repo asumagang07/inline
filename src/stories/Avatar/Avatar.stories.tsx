@@ -18,6 +18,21 @@ const meta: Meta<typeof Avatar> = {
       options: ["full", "default", "square"],
       control: { type: "radio" },
     },
+    color: {
+      defaultValue: "blue",
+      description:
+        "Property that changes theme/state of the selection i.e. background and text color",
+      options: [
+        "blue",
+        "red",
+        "orange",
+        "yellow",
+        "purple",
+        "green",
+        "default",
+      ],
+      control: { type: "select" },
+    },
   },
 };
 
@@ -28,8 +43,19 @@ export const Default: Story = {
   render: (args: any) => <Avatar {...args} />,
   args: {
     size: "default",
+    color: "blue",
     image:
       "https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+};
+
+export const Initials: Story = {
+  render: (args: any) => <Avatar {...args} />,
+  args: {
+    ...Default.args,
+    size: "default",
+    image: "",
+    name: "John Doe",
   },
 };
 
