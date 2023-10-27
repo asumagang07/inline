@@ -4,7 +4,7 @@ export const cardStyles = {
     notWidthFull: "min-w-[300px] max-w-[300px]",
   },
   headerCls: {
-    base: "flex flex-row items-center gap-2",
+    base: "flex flex-row items-center gap-3",
     imagePosition: {
       top: "px-3 pt-3",
       center: "p-3",

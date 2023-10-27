@@ -2,7 +2,7 @@ import React, { FC, useContext } from "react";
 import { TCardProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
-import { Button } from "..";
+import { Avatar, Button } from "..";
 
 const Card: FC<TCardProps> = (props) => {
   const {
@@ -35,7 +35,7 @@ const Card: FC<TCardProps> = (props) => {
       <div
         className={cn(headerCls.base, headerCls.imagePosition[imagePosition])}
       >
-        <div className="min-w-[2rem] min-h-[2rem] max-w-[2rem] max-h-[2rem] rounded-full bg-blue-500"></div>
+        <Avatar image="https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600" />
         <div className={headerCls.title.containerCls}>
           <p className={headerCls.title.titleCls}>{title}</p>
           <p className={headerCls.title.subTitleCls}>{subTitle}</p>

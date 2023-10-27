@@ -1,3 +1,4 @@
-export {buttonStyles} from './buttonStyles'
-export {navStyles} from './navStyles'
-export {cardStyles} from './cardStyles'
+export { avatarStyles } from "./avatarStyles";
+export { buttonStyles } from "./buttonStyles";
+export { cardStyles } from "./cardStyles";
+export { navStyles } from "./navStyles";
