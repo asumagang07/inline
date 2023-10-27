@@ -3,6 +3,7 @@ import { TAvatarProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 import { getInitials } from "./utils";
+import { Image } from "../Image";
 
 const Avatar: FC<TAvatarProps> = (props) => {
   const {
@@ -45,14 +46,20 @@ const Avatar: FC<TAvatarProps> = (props) => {
     if (!image) return null;
 
     return (
-      <img
-        className={cn(
-          "w-full h-full bg-cover",
-          rootCls.borderRadius[borderRadius]
-        )}
-        alt=""
+      <Image
+        id={"avatar-image"}
         src={image}
+        size="auto"
+        borderRadius={borderRadius}
       />
+      // <img
+      //   className={cn(
+      //     "w-full h-full bg-cover",
+      //     rootCls.borderRadius[borderRadius]
+      //   )}
+      //   alt=""
+      //   src={image}
+      // />
     );
   };
 

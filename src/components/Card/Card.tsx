@@ -2,7 +2,7 @@ import React, { FC, useContext } from "react";
 import { TCardProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
-import { Avatar, Button } from "..";
+import { Avatar, Button, Image } from "..";
 
 const Card: FC<TCardProps> = (props) => {
   const {
@@ -42,7 +42,12 @@ const Card: FC<TCardProps> = (props) => {
         </div>
       </div>
       <div className={cn(imageCls.base, imageCls.imagePosition[imagePosition])}>
-        <img className="w-full h-full bg-cover" src={thumbnail} alt="" />
+        <Image
+          id={"card-thumbnail"}
+          src={thumbnail}
+          size="auto"
+          borderRadius="square"
+        />
       </div>
       <div className={cn("flex flex-col gap-2 p-3 text-sm")}>
         {children}

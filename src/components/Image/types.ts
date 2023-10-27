@@ -1,7 +1,10 @@
-import { useImageProps } from "react-image";
+import { DefaultSize } from "../../common/enums";
 
-export interface TImageProps extends Pick<useImageProps, "srcList"> {
+export interface TImageProps {
   id: string;
   className?: string;
-  srcList: string | string[];
+  src?: any;
+  size?: keyof typeof DefaultSize | "auto";
+  fit?: "cover" | "contain";
+  borderRadius?: "full" | "default" | "square";
 }

@@ -41,7 +41,7 @@ export const Default: Story = {
     widthFull: false,
     actions: actions as TButtonProps[],
     thumbnail:
-      "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png",
+      "https://images.pexels.com/photos/12725055/pexels-photo-12725055.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
 };
 
