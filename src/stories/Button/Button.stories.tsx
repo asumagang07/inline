@@ -76,3 +76,11 @@ export const WithIcon: Story = {
     icon: <BiSolidUser />,
   },
 };
+
+export const NoBaseStyle: Story = {
+  render: (args: any) => <Button {...args} />,
+  args: {
+    ...Default.args,
+    noBaseStyle: true,
+  },
+};

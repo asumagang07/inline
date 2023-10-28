@@ -7,6 +7,7 @@ export interface TButtonProps
   label?: string;
   children?: ReactNode;
   variant?: "solid" | "outlined" | "flat";
+  noBaseStyle?: boolean;
   borderRadius?: "full" | "default" | "square";
   color?: keyof typeof DefaultColorEnum;
   size?: keyof typeof DefaultSize;
