@@ -101,3 +101,9 @@ export enum DefaultSize {
   "md",
   "lg",
 }
+
+export enum DefaultBorderRadius {
+  "full",
+  "default",
+  "square",
+}

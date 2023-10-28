@@ -9,6 +9,7 @@ const Button: FC<TButtonProps> = (props) => {
     children,
     className,
     label,
+    icon,
     variant = "solid",
     borderRadius = "default",
     color = "blue",
@@ -44,6 +45,7 @@ const Button: FC<TButtonProps> = (props) => {
       )}
       onClick={rest.onClick}
     >
+      {icon}
       {label}
       {children}
     </button>

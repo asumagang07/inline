@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../../components";
+import { BiSolidUser } from "react-icons/bi";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -65,5 +66,13 @@ export const Flat: Story = {
   args: {
     ...Default.args,
     variant: "flat",
+  },
+};
+
+export const WithIcon: Story = {
+  render: (args: any) => <Button {...args} />,
+  args: {
+    ...Default.args,
+    icon: <BiSolidUser />,
   },
 };

@@ -10,4 +10,5 @@ export interface TButtonProps
   borderRadius?: "full" | "default" | "square";
   color?: keyof typeof DefaultColorEnum;
   size?: keyof typeof DefaultSize;
+  icon?: string | JSX.Element;
 }
