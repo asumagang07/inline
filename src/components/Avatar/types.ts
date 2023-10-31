@@ -1,6 +1,7 @@
 import { DefaultColorEnum, DefaultSize } from "../../common/enums";
 
 export interface TAvatarProps {
+  id: string;
   image?: string;
   size?: keyof typeof DefaultSize;
   borderRadius?: "full" | "default" | "square";

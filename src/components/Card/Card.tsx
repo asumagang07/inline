@@ -35,7 +35,10 @@ const Card: FC<TCardProps> = (props) => {
       <div
         className={cn(headerCls.base, headerCls.imagePosition[imagePosition])}
       >
-        <Avatar image="https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+        <Avatar
+          id="avatar"
+          image="https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        />
         <div className={headerCls.title.containerCls}>
           <p className={headerCls.title.titleCls}>{title}</p>
           <p className={headerCls.title.subTitleCls}>{subTitle}</p>

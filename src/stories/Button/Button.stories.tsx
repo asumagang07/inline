@@ -84,3 +84,35 @@ export const NoBaseStyle: Story = {
     noBaseStyle: true,
   },
 };
+
+export const PlayAllProps: Story = {
+  render: (args: any) => (
+    <div className="flex flex-col gap-4">
+      <p>Color</p>
+      <div className="flex gap-4">
+        <Button {...args} />
+        <Button {...args} color="green" />
+        <Button {...args} color="orange" />
+        <Button {...args} color="red" />
+        <Button {...args} color="yellow" />
+        <Button {...args} color="purple" />
+        <Button {...args} color="default" />
+      </div>
+      <p>Border Radius</p>
+      <div className="flex gap-4">
+        <Button {...args} />
+        <Button {...args} borderRadius="square" />
+        <Button {...args} borderRadius="full" />
+      </div>
+      <p>Variant</p>
+      <div className="flex gap-4">
+        <Button {...args} />
+        <Button {...args} variant="outlined" />
+        <Button {...args} variant="flat" />
+      </div>
+    </div>
+  ),
+  args: {
+    ...Default.args,
+  },
+};

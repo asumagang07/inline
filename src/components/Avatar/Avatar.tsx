@@ -4,9 +4,11 @@ import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 import { getInitials } from "./utils";
 import { Image } from "../Image";
+import { BiSolidUser } from "react-icons/bi";
 
 const Avatar: FC<TAvatarProps> = (props) => {
   const {
+    id = "avatar",
     image,
     size = "default",
     borderRadius = "full",
@@ -52,19 +54,31 @@ const Avatar: FC<TAvatarProps> = (props) => {
         size="auto"
         borderRadius={borderRadius}
       />
-      // <img
-      //   className={cn(
-      //     "w-full h-full bg-cover",
-      //     rootCls.borderRadius[borderRadius]
-      //   )}
-      //   alt=""
-      //   src={image}
-      // />
+    );
+  };
+
+  const renderDefaultView = () => {
+    if (image) return null;
+
+    if (name) return null;
+
+    return (
+      <div
+        className={cn(
+          initialCls.base,
+          initialCls.size[size],
+          rootCls.colors[color],
+          rootCls.borderRadius[borderRadius]
+        )}
+      >
+        <BiSolidUser />
+      </div>
     );
   };
 
   return (
     <div
+      id={id}
       className={cn(
         rootCls.base,
         "flex items-center justify-center ",
@@ -74,6 +88,7 @@ const Avatar: FC<TAvatarProps> = (props) => {
     >
       {renderImage()}
       {renderInitial()}
+      {renderDefaultView()}
       {status?.value && (
         <span
           className={cn(

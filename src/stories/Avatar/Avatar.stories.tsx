@@ -6,6 +6,10 @@ const meta: Meta<typeof Avatar> = {
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
   argTypes: {
+    id: {
+      defaultValue: "avatar",
+      type: "string",
+    },
     size: {
       defaultValue: "default",
       description: "Changes the variation of the element. ",
@@ -42,6 +46,7 @@ type Story = StoryObj<typeof Avatar>;
 export const Default: Story = {
   render: (args: any) => <Avatar {...args} />,
   args: {
+    id: "avatar",
     size: "default",
     color: "blue",
     image:
@@ -68,5 +73,37 @@ export const WithStatus: Story = {
       value: "active",
       note: "",
     },
+  },
+};
+
+export const PlayAllProps: Story = {
+  render: (args: any) => (
+    <div className="flex flex-col gap-4">
+      <p>States</p>
+      <div className="flex gap-4">
+        <Avatar {...args} />
+        <Avatar {...args} image="" name="John Doe" />
+        <Avatar {...args} image="" name="" />
+      </div>
+      <p>Border Radius</p>
+      <div className="flex gap-4">
+        <Avatar {...args} />
+        <Avatar {...args} borderRadius="square" />
+        <Avatar {...args} borderRadius="full" />
+      </div>
+      <p>Status</p>
+      <div className="flex gap-4">
+        <Avatar {...args} status={{ value: "active", note: "" }} />
+        <Avatar {...args} status={{ value: "offline", note: "" }} />
+        <Avatar {...args} status={{ value: "busy", note: "" }} />
+      </div>
+    </div>
+  ),
+  args: {
+    ...Default.args,
+    image:
+      "https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    size: "default",
+    name: "John Doe",
   },
 };
