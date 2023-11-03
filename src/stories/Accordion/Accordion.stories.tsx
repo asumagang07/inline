@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Accordion } from "../../components";
-import { AccordionData } from "./data";
+import { AccordionData, AccordionWithIconData } from "./data";
 
 const meta: Meta<typeof Accordion> = {
   component: Accordion,
@@ -48,6 +48,22 @@ export const Default: Story = {
   render: (args: any) => <Accordion {...args} />,
   args: {
     items: AccordionData,
+    allowZeroExpanded: true,
+  },
+};
+
+export const PreExpandedItems: Story = {
+  render: (args: any) => <Accordion {...args} />,
+  args: {
+    items: AccordionData,
+    preExpanded: ["1", "3"],
+  },
+};
+
+export const WithItemIcon: Story = {
+  render: (args: any) => <Accordion {...args} />,
+  args: {
+    items: AccordionWithIconData,
     allowZeroExpanded: true,
   },
 };

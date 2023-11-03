@@ -1,19 +1,17 @@
-import { ReactNode } from "react"
-import { JsxElement } from "typescript"
+import { ReactNode } from "react";
 
 export interface TAccordionProps {
-    className?: string
-    title?: string
-    items?: TAccordionItemProps[]
-    allowZeroExpanded?: boolean
-    preExpanded?: string[]
+  className?: string;
+  items?: TAccordionItemProps[];
+  allowZeroExpanded?: boolean;
+  preExpanded?: string[];
 }
 
 export interface TAccordionItemProps {
-    id?: string | number
-    className?:  string
-    heading?: string
-    headingIcon?: string | JsxElement
-    onClick?: () => void
-    content?: ReactNode | string
+  id?: string | number;
+  className?: string;
+  heading?: string;
+  itemIcon?: string | JSX.Element;
+  onClick?: () => void;
+  content?: ReactNode | string;
 }
