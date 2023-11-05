@@ -19,32 +19,44 @@ const stepsData: TStepsProps[] = [
   {
     label: "Create Account",
     status: "completed",
-    content: "Here is some step content",
+    content:
+      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
   {
     label: "Verify Amount",
     status: "active",
+    content:
+      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
   {
     label: "Add Payment Method",
     status: "pending",
     content: (
-      <div className="">
-        <Button id="button" label="Next" />
+      <div className="flex flex-col gap-2">
+        is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book.
+        <Button id="button" size="sm" label="Next" />
       </div>
     ),
   },
   {
     label: "Add Payment Method",
     status: "error",
+    content:
+      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
   {
     label: "Add Payment Method",
-    status: "pending",
+    status: "disabled",
+    content:
+      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
 ];
 
 export default meta;
+
 type Story = StoryObj<typeof Stepper>;
 
 export const Default: Story = {
