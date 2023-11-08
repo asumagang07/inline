@@ -6,19 +6,11 @@ export interface TStepperProps {
   className?: string;
   steps?: TStepsProps[];
   color?: keyof typeof DefaultColorEnum;
+  current?: number;
 }
 
 export interface TStepsProps {
   label?: string;
-  status?: keyof typeof Status;
+  description?: string;
   content?: ReactNode;
-}
-
-enum Status {
-  "pending",
-  "active",
-  "progress",
-  "completed",
-  "error",
-  "disabled",
 }

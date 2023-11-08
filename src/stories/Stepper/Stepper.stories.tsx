@@ -1,13 +1,15 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, Stepper, TStepsProps } from "../../components";
+import { VerticalStepper, TStepsProps } from "../../components";
 
-const meta: Meta<typeof Stepper> = {
-  component: Stepper,
+const meta: Meta<typeof VerticalStepper> = {
+  component: VerticalStepper,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Stepper/VerticalStepper",
   argTypes: {
     id: {
-      defaultValue: "Stepper",
+      defaultValue: "VerticalStepper",
       description:
         "Sets the default value or state of the component (i.e activated or checked or prefilled).",
       type: "string",
@@ -18,51 +20,38 @@ const meta: Meta<typeof Stepper> = {
 const stepsData: TStepsProps[] = [
   {
     label: "Create Account",
-    status: "completed",
+    description: "Description 1 here",
     content:
       " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
   {
     label: "Verify Amount",
-    status: "active",
+    description: "Description 2 here",
     content:
       " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
   {
     label: "Add Payment Method",
-    status: "pending",
     content: (
       <div className="flex flex-col gap-2">
         is simply dummy text of the printing and typesetting industry. Lorem
         Ipsum has been the industry's standard dummy text ever since the 1500s,
         when an unknown printer took a galley of type and scrambled it to make a
         type specimen book.
-        <Button id="button" size="sm" label="Next" />
       </div>
     ),
-  },
-  {
-    label: "Add Payment Method",
-    status: "error",
-    content:
-      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-  },
-  {
-    label: "Add Payment Method",
-    status: "disabled",
-    content:
-      " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
   },
 ];
 
 export default meta;
 
-type Story = StoryObj<typeof Stepper>;
+type Story = StoryObj<typeof VerticalStepper>;
 
 export const Default: Story = {
-  render: (args: any) => <Stepper {...args} />,
+  render: (args: any) => <VerticalStepper {...args} />,
   args: {
-    id: "Stepper",
+    id: "VerticalStepper",
     steps: stepsData,
+    current: 1,
   },
 };

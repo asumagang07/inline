@@ -6,6 +6,7 @@ const meta: Meta<typeof Alert> = {
   component: Alert,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Alert",
   argTypes: {
     id: {
       defaultValue: "Alert",

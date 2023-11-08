@@ -5,6 +5,8 @@ const meta: Meta<typeof Avatar> = {
   component: Avatar,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Avatar",
+
   argTypes: {
     id: {
       defaultValue: "avatar",

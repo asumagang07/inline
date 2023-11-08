@@ -5,6 +5,7 @@ const meta: Meta<typeof Image> = {
   component: Image,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Image",
   argTypes: {
     id: {
       defaultValue: "Image",

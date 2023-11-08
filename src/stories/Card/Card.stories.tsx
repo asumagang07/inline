@@ -6,6 +6,7 @@ const meta: Meta<typeof Card> = {
   component: Card,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Card",
   argTypes: {
     id: {
       defaultValue: "card",

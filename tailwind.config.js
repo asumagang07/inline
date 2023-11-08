@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js,jsx,ts,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./stories/**/*.{js,ts,jsx,tsx,mdx}", //needed to make hot reload work with stories
+    // "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./stories/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {

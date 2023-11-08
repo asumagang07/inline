@@ -6,6 +6,7 @@ const meta: Meta<typeof Accordion> = {
   component: Accordion,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
+  title: "Components/Accordion",
   argTypes: {
     // id: {
     //   defaultValue: "Accordion",
