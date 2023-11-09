@@ -5,3 +5,4 @@ export { cardStyles } from "./cardStyles";
 export { imageStyles } from "./imageStyles";
 export { navStyles } from "./navStyles";
 export { stepperStyles } from "./stepperStyles";
+export { tabStyles } from "./tabStyles";

@@ -3,10 +3,13 @@ import { ReactNode } from "react";
 export interface TTabsProps {
   className?: string;
   items?: TabItemProps[];
+  defaultActiveTab?: number;
+  variant?: "flat" | "compact";
+  closable?: boolean;
 }
 
 export interface TabItemProps {
-  id?: string;
+  id?: number;
   label?: string;
   icon?: string | JSX.Element;
   children?: ReactNode;
