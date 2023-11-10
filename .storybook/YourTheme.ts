@@ -6,7 +6,7 @@ import logo from "../public/inline.png";
 export default create({
   base: "light",
   brandTitle: "My custom Storybook",
-  brandUrl: "https://example.com",
+  brandUrl: "https://master--6535bb14035a6efc89bac13e.chromatic.com",
   brandImage: logo,
   brandTarget: "_self",
 

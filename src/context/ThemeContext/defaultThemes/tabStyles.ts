@@ -9,15 +9,15 @@ export const tabStyles = {
       variants: {
         compact: {
           active:
-            "border border-b-white border-default-300 rounded-t-md text-blue-500",
+            "border border-b-white border-default-300 rounded-t-md text-blue-500 bg-white",
           default:
-            "border border-default-300 rounded-t-md text-default-700 hover:bg-blue-50",
+            "border border-default-300 rounded-t-md text-default-700 hover:bg-blue-50 bg-white",
           disabled: "",
         },
         flat: {
-          active: "border-b-2 border-b-blue-500 text-blue-500",
+          active: "border-b-2 border-b-blue-500 text-blue-500 bg-white",
           default:
-            " border-b-2 border-b-transparent text-default-700 hover:text-blue-500",
+            "bg-white border-b default-300 text-default-700 hover:text-blue-500",
           disabled: "",
         },
       },

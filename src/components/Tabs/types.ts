@@ -6,6 +6,7 @@ export interface TTabsProps {
   defaultActiveTab?: number;
   variant?: "flat" | "compact";
   closable?: boolean;
+  draggable?: boolean;
 }
 
 export interface TabItemProps {
@@ -13,4 +14,5 @@ export interface TabItemProps {
   label?: string;
   icon?: string | JSX.Element;
   children?: ReactNode;
+  disabled?: boolean;
 }

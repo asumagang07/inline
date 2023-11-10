@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from "@storybook/react";
-import { Tabs, TabItemProps } from "../../components";
+import { Tabs } from "../../components";
+import { items, itemsWithDisabledTab, itemsWithIcon } from "./data";
 // import { MdDashboard } from "react-icons/md";
 
 const meta: Meta<typeof Tabs> = {
@@ -10,27 +11,6 @@ const meta: Meta<typeof Tabs> = {
   title: "Components/Tabs",
   argTypes: {},
 };
-
-const items: TabItemProps[] = [
-  {
-    id: 1,
-    label: "Profile",
-    // icon: <MdDashboard />,
-    children: "Children 1",
-  },
-  {
-    id: 2,
-    label: "Dashboard",
-    // icon: <MdDashboard />,
-    children: "Children 2",
-  },
-  {
-    id: 3,
-    label: "Settings",
-    // icon: <MdDashboard />,
-    children: "Children 3",
-  },
-];
 
 export default meta;
 
@@ -74,5 +54,30 @@ export const Closable: Story = {
   args: {
     ...Default.args,
     closable: true,
+  },
+};
+
+export const WithIcon: Story = {
+  render: (args: any) => <Tabs {...args} />,
+  args: {
+    ...Default.args,
+    items: itemsWithIcon,
+  },
+};
+
+export const WithDisabledItem: Story = {
+  render: (args: any) => <Tabs {...args} />,
+  args: {
+    ...Default.args,
+    items: itemsWithDisabledTab,
+  },
+};
+
+export const Draggable: Story = {
+  render: (args: any) => <Tabs {...args} />,
+  args: {
+    ...Default.args,
+    items: itemsWithIcon,
+    draggable: true,
   },
 };
