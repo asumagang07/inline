@@ -1,7 +1,8 @@
-import React, { FC, useContext } from "react";
+import React, { FC, useCallback, useContext } from "react";
 import { TButtonProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
+import { Spinner } from "../Spinner";
 
 const Button: FC<TButtonProps> = (props) => {
   const {
@@ -15,6 +16,8 @@ const Button: FC<TButtonProps> = (props) => {
     color = "blue",
     size = "default",
     noBaseStyle = false,
+    isLoading = false,
+    labelLoading = "Loading",
     ...rest
   } = props;
 
@@ -31,7 +34,10 @@ const Button: FC<TButtonProps> = (props) => {
     rootCls.borders[variant],
     rootCls.borderRadius[borderRadius],
     rootCls.variants[variant].colors[color],
-    rootCls.hoverable.variants[variant].colors[color],
+    {
+      "cursor-not-allowed opacity-50": isLoading,
+      [rootCls.hoverable.variants[variant].colors[color]]: !isLoading,
+    },
     borderRadius === "default"
       ? "rounded-sm"
       : borderRadius === "full"
@@ -41,6 +47,17 @@ const Button: FC<TButtonProps> = (props) => {
     className
   );
 
+  const renderLeftIcon = useCallback(() => {
+    if (isLoading) return <Spinner color="white" />;
+    return icon;
+  }, [icon, isLoading]);
+
+  const renderLabelChildren = useCallback(() => {
+    if (isLoading) return labelLoading;
+    if (!isLoading && label) return label;
+    return children;
+  }, [labelLoading, label, children, isLoading]);
+
   return (
     <button
       {...rest}
@@ -48,9 +65,8 @@ const Button: FC<TButtonProps> = (props) => {
       className={cn(noBaseStyle ? className : buttonClasses)}
       onClick={rest.onClick}
     >
-      {icon}
-      {label}
-      {children}
+      {renderLeftIcon()}
+      {renderLabelChildren()}
     </button>
   );
 };

@@ -51,6 +51,8 @@ export const Default: Story = {
     borderRadius: "default",
     color: "blue",
     size: "default",
+    isLoading: false,
+    labelLoading: "Loading...",
   },
 };
 

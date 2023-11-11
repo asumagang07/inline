@@ -1,0 +1,98 @@
+
+Chromatic CLI v7.6.0
+https://www.chromatic.com/docs/cli
+
+Authenticating with Chromatic
+    → Connecting to https://index.chromatic.com
+⚠ Using outdated package
+You are using an outdated version of the Chromatic CLI (v7.6.0).
+A new major version is available (v8.0.0).
+Run yarn upgrade chromatic --latest to upgrade.
+Authenticated with Chromatic
+    → Using project token '****************4dff'
+Retrieving git information
+Retrieved git information
+    → Commit 'efade5c' on branch 'master'; found 1 parent build
+Collecting Storybook metadata
+Collected Storybook metadata
+    → Storybook 7.5.3 for React; using the @storybook/react-webpack5 builder (7.5.3); supported addons found: Links, Essentials, Interactions
+Initializing build
+Initialized build
+    → Build 17 initialized
+Building your Storybook
+    → Running command: yarn run build-storybook --output-dir /tmp/chromatic--71919-qmv3yylAX13M
+Storybook built in 19 seconds
+    → View build log at /home/dnauser/Documents/Practice/inline/build-storybook.log
+Publish your built Storybook
+    → Validating Storybook files
+Publishing your built Storybook
+    → Retrieving target location
+    → Starting publish
+    → [                    ] 0%
+    → [==                  ] 8%
+    → [==                  ] 11%
+    → [===                 ] 15%
+    → [====                ] 20%
+    → [=======             ] 34%
+    → [=======             ] 36%
+    → [=======             ] 37%
+    → [========            ] 38%
+    → [========            ] 39%
+    → [========            ] 40%
+    → [========            ] 42%
+    → [=========           ] 43%
+    → [=========           ] 47%
+    → [==========          ] 51%
+    → [===========         ] 54%
+    → [============        ] 58%
+    → [============        ] 62%
+    → [=============       ] 63%
+    → [=============       ] 65%
+    → [=============       ] 66%
+    → [==============      ] 68%
+    → [==============      ] 69%
+    → [==============      ] 71%
+    → [===============     ] 73%
+    → [===============     ] 76%
+    → [===============     ] 77%
+    → [================    ] 80%
+    → [================    ] 81%
+    → [================    ] 82%
+    → [=================   ] 84%
+    → [==================  ] 92%
+    → [=================== ] 93%
+    → [=================== ] 94%
+    → [=================== ] 95%
+    → [====================] 98%
+    → [====================] 99%
+    → [====================] 100%
+Publish complete in 10 seconds
+    → View your Storybook at https://6535bb14035a6efc89bac13e-fuezbvlnrn.chromatic.com
+Verifying your Storybook
+    → This may take a few minutes
+Started build 17
+    → View build details at https://www.chromatic.com/build?appId=6535bb14035a6efc89bac13e&number=17
+Running 30 tests
+    → This may take a few minutes
+ℹ Speed up Continuous Integration
+Your project is linked to GitHub so Chromatic will report results there.
+This means you can pass the --exit-once-uploaded flag to skip waiting for build results.
+Read more here: https://www.chromatic.com/docs/cli#chromatic-options
+    → [=                   ] 1/30  Accordion › Default 
+    → [=                   ] 2/30  Accordion › Pre Expanded Items 
+    → [===                 ] 4/30  Alert › Default 
+    → [=====               ] 7/30  Alert › Play All Props 
+    → [=======             ] 10/30  Avatar › With Status 
+    → [==========          ] 15/30  Button › With Icon 
+    → [=============       ] 19/30  Card › Image Top 
+    → [===============     ] 22/30  VerticalStepper › Default 
+    → [================    ] 24/30  Tabs › Flat 
+    → [=================   ] 26/30  Tabs › Default Active Tab 
+    → [==================  ] 27/30  Tabs › Closable 
+    → [=================== ] 28/30  Tabs › With Icon 
+    → [=================== ] 29/30  Tabs › With Disabled Item 
+    → [====================] 30/30  Tabs › Draggable 
+    → [====================] 31/30  
+✔ Build 17 passed!
+5 visual changes were found in this build.
+ℹ View build details at https://www.chromatic.com/build?appId=6535bb14035a6efc89bac13e&number=17

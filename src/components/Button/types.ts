@@ -12,4 +12,6 @@ export interface TButtonProps
   color?: keyof typeof DefaultColorEnum;
   size?: keyof typeof DefaultSize;
   icon?: string | JSX.Element;
+  isLoading?: boolean;
+  labelLoading?: string;
 }
