@@ -11,7 +11,7 @@ const Spinner: FC<TSpinnerProps> = (props) => {
     ray_width = 5,
     ray_radius = 50,
     className,
-    color = "blue",
+    color = "purple",
   } = props;
 
   const rays: JSX.Element[] = [];

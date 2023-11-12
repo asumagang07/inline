@@ -10,7 +10,7 @@ const VerticalStepper: FC<TStepperProps> = (props) => {
     id = "stepper",
     className,
     steps,
-    color = "blue",
+    color = "purple",
     current = 0,
   } = props;
 

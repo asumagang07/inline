@@ -25,7 +25,7 @@ const meta: Meta<typeof Avatar> = {
       control: { type: "radio" },
     },
     color: {
-      defaultValue: "blue",
+      defaultValue: "purple",
       description:
         "Property that changes theme/state of the selection i.e. background and text color",
       options: [
@@ -50,7 +50,7 @@ export const Default: Story = {
   args: {
     id: "avatar",
     size: "default",
-    color: "blue",
+    color: "purple",
     image:
       "https://images.pexels.com/photos/191340/pexels-photo-191340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },

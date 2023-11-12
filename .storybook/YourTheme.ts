@@ -1,7 +1,7 @@
 // .storybook/YourTheme.js
 
 import { create } from "@storybook/theming/create";
-import logo from "../public/inline.png";
+import logo from "../public/secondary-logo_3x.png";
 
 export default create({
   base: "light",

@@ -20,7 +20,7 @@ const meta: Meta<typeof Button> = {
       control: { type: "select" },
     },
     color: {
-      defaultValue: "blue",
+      defaultValue: "purple",
       description:
         "Property that changes theme/state of the selection i.e. background and text color",
       options: [
@@ -49,7 +49,7 @@ export const Default: Story = {
     label: "Button",
     variant: "solid",
     borderRadius: "default",
-    color: "blue",
+    color: "purple",
     size: "default",
     isLoading: false,
     labelLoading: "Loading...",
@@ -98,7 +98,7 @@ export const PlayAllProps: Story = {
         <Button {...args} color="orange" />
         <Button {...args} color="red" />
         <Button {...args} color="yellow" />
-        <Button {...args} color="purple" />
+        <Button {...args} color="blue" />
         <Button {...args} color="default" />
       </div>
       <p>Border Radius</p>

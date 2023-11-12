@@ -11,7 +11,7 @@ const Alert: FC<TAlertProps> = (props) => {
     icon,
     label,
     borderRadius = "default",
-    color = "blue",
+    color = "purple",
     bordered = false,
   } = props;
 

@@ -15,7 +15,7 @@ const meta: Meta<typeof Alert> = {
       type: "string",
     },
     color: {
-      defaultValue: "blue",
+      defaultValue: "purple",
       description:
         "Property that changes theme/state of the selection i.e. background and text color",
       options: [
@@ -53,7 +53,7 @@ export const Default: Story = {
   ),
   args: {
     id: "alert",
-    color: "blue",
+    color: "purple",
     bordered: false,
     borderRadius: "default",
   },

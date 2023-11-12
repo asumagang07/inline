@@ -13,7 +13,7 @@ const Button: FC<TButtonProps> = (props) => {
     icon,
     variant = "solid",
     borderRadius = "default",
-    color = "blue",
+    color = "purple",
     size = "default",
     noBaseStyle = false,
     isLoading = false,

@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/addon-docs";
+import cn from "classnames";
+import cover from "../../public/primary-logo_3x.png";
+import { colorData } from "../common/colors.ts";
+
+
+
+<Meta title="Get Started" />
+
+<img src={cover} alt="logo" className="w-60 mb-12" />
+
+An open source ui component library created with react, typescript and tailwind css that helps developer create flexible and reuseable ui components for their projects.
+
+## Get Started
+
+To use inline components just install inline components first.
+
+```
+yarn add inline-components
+```
+
+Then import the component you want to use.
+
+```
+import { Button } from "inline-components";
+
+export const index = () => {
+  return (
+    <Button id='button' label='Button' />
+  )
+}
+```
+
+
+## Inline Design Configuration
+
+### Colors
+
+**Example usage**: backgrounds: `bg-blue-500`, texts: `text-red`, borders: `border-blue-200`
+
+
+
+<div className="">
+
+  <div class="grid grid-cols-10 gap-y-2 gap-x-4">
+    {colorData.map((color) => (
+      <div>
+        <p className="!text-xs !m-0">{color.label}</p>
+        <div
+          className={cn(
+            "flex items-center justify-center h-10 !text-sm",
+            color.value
+          )}
+        ></div>
+      </div>
+    ))}
+  </div>
+</div>

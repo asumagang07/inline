@@ -32,7 +32,7 @@ const AccordionComponent: FC<TAccordionProps> = (props) => {
               return expanded ? (
                 <AccordionItemHeading
                   className={cn(
-                    "AccordionItemHeading px-3 h-12 flex items-center justify-between border-b  bg-blue-50  "
+                    "AccordionItemHeading px-3 h-12 flex items-center justify-between border-b  bg-purple-50  "
                   )}
                 >
                   <AccordionItemButton className="w-full h-full flex gap-2 items-center justify-between font-medium ">

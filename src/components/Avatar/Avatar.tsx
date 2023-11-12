@@ -14,7 +14,7 @@ const Avatar: FC<TAvatarProps> = (props) => {
     borderRadius = "full",
     status,
     name,
-    color = "blue",
+    color = "purple",
   } = props;
 
   const {

@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-computed-key */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { FC, useContext, useEffect, useMemo, useState } from "react";
+import React, { FC, useContext, useMemo, useState } from "react";
 import { TTabsProps } from "./types";
 import cn from "classnames";
 import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
