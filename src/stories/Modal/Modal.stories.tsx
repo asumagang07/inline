@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { AlertDialog, Button } from "../../components";
+import { Modal, Button } from "../../components";
 
-const meta: Meta<typeof AlertDialog> = {
-  component: AlertDialog,
+const meta: Meta<typeof Modal> = {
+  component: Modal,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  title: "Components/AlertDialog",
+  title: "Components/Modal",
 
   argTypes: {},
 };
 
 export default meta;
-type Story = StoryObj<typeof AlertDialog>;
+type Story = StoryObj<typeof Modal>;
 
 export const Default: Story = {
-  render: (args: any) => <AlertDialog {...args} />,
+  render: (args: any) => <Modal {...args} />,
   args: {
     trigger: <Button id="btn" label="Delete Account" />,
+    content: <div className="">Content Here.</div>,
   },
 };
