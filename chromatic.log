@@ -11,5 +11,87 @@ Run yarn upgrade chromatic --latest to upgrade.
 Authenticated with Chromatic
     → Using project token '****************4dff'
 Retrieving git information
-Skipping build
-    → Skipping rebuild of an already fully passed/accepted build
+Retrieved git information
+    → Commit 'b2d5526' on branch 'master'; found 1 parent build
+Collecting Storybook metadata
+Collected Storybook metadata
+    → Storybook 7.5.3 for React; using the @storybook/react-webpack5 builder (7.5.3); supported addons found: Links, Essentials, Interactions
+Initializing build
+Initialized build
+    → Build 23 initialized
+Building your Storybook
+    → Running command: yarn run build-storybook --output-dir /tmp/chromatic--35234-okZi4lwKZxHs
+Storybook built in 32 seconds
+    → View build log at /home/dnauser/Documents/Practice/inline/build-storybook.log
+Publish your built Storybook
+    → Validating Storybook files
+Publishing your built Storybook
+    → Retrieving target location
+    → Starting publish
+    → [                    ] 0%
+    → [=                   ] 7%
+    → [==                  ] 10%
+    → [===                 ] 15%
+    → [====                ] 22%
+    → [======              ] 30%
+    → [======              ] 32%
+    → [=======             ] 33%
+    → [=======             ] 35%
+    → [=======             ] 36%
+    → [========            ] 42%
+    → [=========           ] 43%
+    → [=========           ] 45%
+    → [=========           ] 46%
+    → [==========          ] 50%
+    → [===========         ] 56%
+    → [===========         ] 57%
+    → [============        ] 58%
+    → [============        ] 59%
+    → [============        ] 60%
+    → [============        ] 62%
+    → [=============       ] 63%
+    → [=============       ] 64%
+    → [=============       ] 65%
+    → [=============       ] 66%
+    → [==============      ] 68%
+    → [==============      ] 70%
+    → [==============      ] 71%
+    → [===============     ] 74%
+    → [===============     ] 75%
+    → [===============     ] 77%
+    → [================    ] 79%
+    → [================    ] 82%
+    → [=================   ] 84%
+    → [=================   ] 86%
+    → [==================  ] 90%
+    → [==================  ] 92%
+    → [=================== ] 93%
+    → [=================== ] 94%
+    → [====================] 98%
+    → [====================] 99%
+    → [====================] 100%
+Publish complete in 12 seconds
+    → View your Storybook at https://6535bb14035a6efc89bac13e-kmtlhdexow.chromatic.com
+Verifying your Storybook
+    → This may take a few minutes
+Started build 23
+    → View build details at https://www.chromatic.com/build?appId=6535bb14035a6efc89bac13e&number=23
+Running 35 tests
+    → This may take a few minutes
+ℹ Speed up Continuous Integration
+Your project is linked to GitHub so Chromatic will report results there.
+This means you can pass the --exit-once-uploaded flag to skip waiting for build results.
+Read more here: https://www.chromatic.com/docs/cli#chromatic-options
+    → [=                   ] 1/35  Accordion › Default 
+    → [===                 ] 5/35  Alert › Bordered 
+    → [=====               ] 9/35  Avatar › Initials 
+    → [=======             ] 13/35  Button › Outlined 
+    → [==========          ] 17/35  Button › Play All Props 
+    → [============        ] 21/35  Image › Default 
+    → [=============       ] 23/35  Spinner › Default 
+    → [==================  ] 31/35  Tabs › With Icon 
+    → [=================== ] 33/35  Tabs › Draggable 
+    → [=================== ] 34/35  Tooltip › Default 
+✔ Build 23 passed!
+3 visual changes were found in this build.
+ℹ View build details at https://www.chromatic.com/build?appId=6535bb14035a6efc89bac13e&number=23

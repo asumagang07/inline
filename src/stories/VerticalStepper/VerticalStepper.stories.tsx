@@ -6,7 +6,7 @@ const meta: Meta<typeof VerticalStepper> = {
   component: VerticalStepper,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  title: "Components/Stepper/VerticalStepper",
+  title: "Components/VerticalStepper",
   argTypes: {
     id: {
       defaultValue: "VerticalStepper",
