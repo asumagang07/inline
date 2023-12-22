@@ -5,6 +5,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./HoverCard";
 export * from "./Image";
+export * from "./List";
 export * from "./Modal";
 export * from "./ResizableBox";
 export * from "./Slider";

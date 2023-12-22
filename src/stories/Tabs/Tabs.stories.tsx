@@ -9,7 +9,32 @@ const meta: Meta<typeof Tabs> = {
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
   title: "Components/Tabs",
-  argTypes: {},
+  argTypes: {
+    defaultActiveTab: {
+      defaultValue: 1,
+    },
+    variant: {
+      defaultValue: "compact",
+      options: ["compact", "flat"],
+      control: {
+        type: "radio",
+      },
+    },
+    closable: {
+      defaultValue: false,
+      options: [true, false],
+      control: {
+        type: "boolean",
+      },
+    },
+    draggable: {
+      defaultValue: false,
+      options: [true, false],
+      control: {
+        type: "boolean",
+      },
+    },
+  },
 };
 
 export default meta;
@@ -22,6 +47,8 @@ export const Default: Story = {
     items: items,
     variant: "compact",
     defaultActiveTab: 1,
+    closable: false,
+    draggable: false,
   },
 };
 
