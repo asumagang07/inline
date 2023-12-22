@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from "@storybook/react";
-import { Spinner } from "../../components";
+import { HiOutlinePlus } from "react-icons/hi";
+import { Button, Tooltip } from "../../components";
 
-const meta: Meta<typeof Spinner> = {
-  component: Spinner,
+const meta: Meta<typeof Tooltip> = {
+  component: Tooltip,
   //👇 Enables auto-generated documentation for the component story
   tags: ["autodocs"],
-  title: "Components/Spinner",
+  title: "Components/Tooltip",
   argTypes: {
     color: {
       defaultValue: "purple",
@@ -23,32 +24,26 @@ const meta: Meta<typeof Spinner> = {
       ],
       control: { type: "select" },
     },
-    size: {
-      defaultValue: 25,
-    },
-    ray_height: {
-      defaultValue: 5,
-    },
-    ray_width: {
-      defaultValue: 5,
-    },
-    ray_radius: {
-      defaultValue: 50,
-    },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Spinner>;
+type Story = StoryObj<typeof Tooltip>;
 
 export const Default: Story = {
-  render: (args: any) => <Spinner {...args} />,
+  render: (args: any) => <Tooltip {...args} />,
   args: {
-    color: "purple",
-    size: 25,
-    ray_height: 5,
-    ray_width: 5,
-    ray_radius: 50,
+    color: "default",
+    trigger: <Button id="btn" icon={<HiOutlinePlus />} />,
+    content: "Add user",
+  },
+};
+
+export const WithoutArrow: Story = {
+  render: (args: any) => <Tooltip {...args} />,
+  args: {
+    ...Default.args,
+    withArrow: false,
   },
 };
