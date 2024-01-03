@@ -3,7 +3,7 @@ import { DefaultColorEnum, DefaultSize } from "../../common/enums";
 
 export interface TButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  id: string;
+  id?: string;
   label?: string;
   children?: ReactNode;
   variant?: "solid" | "outlined" | "flat";

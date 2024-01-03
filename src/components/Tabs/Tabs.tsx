@@ -108,7 +108,6 @@ const Tabs: FC<TTabsProps> = (props) => {
                             className="btn-close relative"
                             onClick={() => RemoveTab(item?.id)}
                             icon={<IoMdClose />}
-                            id={"btn"}
                           />
                         )}
                       </li>
@@ -156,7 +155,6 @@ const Tabs: FC<TTabsProps> = (props) => {
                   className="btn-close relative"
                   onClick={() => RemoveTab(item?.id)}
                   icon={<IoMdClose />}
-                  id={"btn"}
                 />
               )}
             </li>
