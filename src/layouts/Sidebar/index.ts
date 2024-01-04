@@ -1,2 +1,2 @@
 export { default as Sidebar } from "./Sidebar";
-export type { ISidebarProps } from "./types";
+export type { ISidebarProps, ISideBarItemProps } from "./types";

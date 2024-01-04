@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Sidebar } from "../../layouts";
+import { Sidebar, ISideBarItemProps } from "../../layouts";
+import { MdCalendarToday, MdOutlineMenuBook } from "react-icons/md";
+import { LuMessageSquare } from "react-icons/lu";
+import { IoCartSharp } from "react-icons/io5";
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
@@ -12,15 +15,28 @@ const meta: Meta<typeof Sidebar> = {
 export default meta;
 type Story = StoryObj<typeof Sidebar>;
 
+const items: ISideBarItemProps[] = [
+  {
+    label: "Dashboard",
+    icon: <MdOutlineMenuBook />,
+  },
+  {
+    label: "Messages",
+    icon: <LuMessageSquare />,
+  },
+  {
+    label: "Order",
+    icon: <IoCartSharp />,
+  },
+  {
+    label: "Calendar",
+    icon: <MdCalendarToday />,
+  },
+];
+
 export const Default: Story = {
-  render: (args: any) => (
-    <Sidebar {...args}>
-      <span className="sr-only">Info</span>
-      <div>
-        <span className="font-medium">Info Sidebar!</span> Change a few things
-        up and try submitting again.
-      </div>
-    </Sidebar>
-  ),
-  args: {},
+  render: (args: any) => <Sidebar {...args} />,
+  args: {
+    items: items,
+  },
 };
