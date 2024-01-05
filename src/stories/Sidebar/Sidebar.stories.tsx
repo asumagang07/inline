@@ -38,5 +38,22 @@ export const Default: Story = {
   render: (args: any) => <Sidebar {...args} />,
   args: {
     items: items,
+    position: "left",
+  },
+};
+
+export const Collapsed: Story = {
+  render: (args: any) => <Sidebar {...args} />,
+  args: {
+    ...Default.args,
+    expanded: false,
+  },
+};
+
+export const RightPosition: Story = {
+  render: (args: any) => <Sidebar {...args} />,
+  args: {
+    ...Default.args,
+    position: "right",
   },
 };

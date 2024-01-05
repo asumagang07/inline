@@ -7,6 +7,7 @@ export * from "./HoverCard";
 export * from "./Image";
 export * from "./List";
 export * from "./Modal";
+export * from "./Popover";
 export * from "./ResizableBox";
 export * from "./Slider";
 export * from "./Spinner";

@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Modal>;
 export const Default: Story = {
   render: (args: any) => <Modal {...args} />,
   args: {
-    trigger: <Button id="btn" label="Delete Account" />,
+    trigger: <Button label="Delete Account" />,
     content: <div className="">Content Here.</div>,
   },
 };

@@ -5,7 +5,9 @@ export interface ISidebarProps {
   logo?: string;
   header?: string;
   subHeader?: string;
+  expanded?: boolean;
   items?: ISideBarItemProps[];
+  position?: "left" | "right";
 }
 
 export interface ISideBarItemProps {

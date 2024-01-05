@@ -13,14 +13,17 @@ const Sidebar: FC<ISidebarProps> = (props) => {
     header = "Logo Name",
     subHeader = "subcontent here",
     items,
+    position = "left",
+    expanded = true,
   } = props;
 
-  const [sidebar_expanded, setsidebar_expanded] = useState(true);
+  const [sidebar_expanded, setsidebar_expanded] = useState(expanded);
 
   return (
     <div
       className={cn(
-        "fixed left-0 top-0  min-h-screen bg-white shadow-lg p-3 flex flex-col justify-start items-start ease-in-out duration-200",
+        "fixed  top-0  min-h-screen bg-white shadow-lg p-3 flex flex-col justify-start items-start ease-in-out duration-200",
+        position === "left" ? "left-0" : "right-0",
         sidebar_expanded ? "w-60" : "w-20"
       )}
     >
