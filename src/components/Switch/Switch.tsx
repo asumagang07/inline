@@ -40,6 +40,7 @@ const SwitchRoot = React.forwardRef<
   return (
     <RSwitch.Root
       ref={ref}
+      disabled={disabled}
       className={cn(rootCls.base, rootCls.colors[color])}
       id="switch"
       {...props}
