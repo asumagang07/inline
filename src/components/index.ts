@@ -3,6 +3,7 @@ export * from "./Alert";
 export * from "./Avatar";
 export * from "./Button";
 export * from "./Card";
+export * from "./DatePicker";
 export * from "./HoverCard";
 export * from "./Image";
 export * from "./List";
