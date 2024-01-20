@@ -1,10 +1,9 @@
 // import ReactDatePicker from "react-datepicker";
 
-export interface IDatePickerProps {
+import { ReactDatePickerProps } from "react-datepicker";
+
+export interface IDatePickerProps
+  extends Pick<ReactDatePickerProps, "onChange"> {
   className?: string;
   value?: Date | null | undefined;
-  onChange?: (
-    date: Date | null,
-    event: React.SyntheticEvent<any, Event> | undefined
-  ) => void;
 }

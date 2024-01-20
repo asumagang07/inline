@@ -4,19 +4,20 @@ import { IDatePickerProps } from "./types";
 import "react-datepicker/dist/react-datepicker.css";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import cn from "classnames";
+import { StyledDatePicker } from "./styles";
 
 const IDatePicker: FC<IDatePickerProps> = (props) => {
   const { className, onChange, value } = props;
 
   return (
-    <div className="inline-flex gap-2 items-center justify-center">
+    <StyledDatePicker className="inline-flex gap-2 items-center justify-center">
       <MdOutlineCalendarMonth />
       <DatePicker
         selected={value}
         className={cn("border border-default-500", className)}
-        onChange={() => onChange}
+        onChange={onChange}
       />
-    </div>
+    </StyledDatePicker>
   );
 };
 
